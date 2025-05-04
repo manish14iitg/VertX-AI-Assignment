@@ -1,0 +1,18 @@
+runtime: nodejs18
+env: standard
+
+instance_class: F1 # Use F2/F4 if you need more resources
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 1
+  max_instances: 3
+
+handlers:
+  - url: /.*
+    script: auto
+
+env_variables:
+  PORT: "8000"
+  MONGO_URI: "mongodb+srv://manish220030:amMdNBug2frBwylh@cluster0.qp5ck0u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  JWT_SECRET: "123456"
