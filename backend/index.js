@@ -15,7 +15,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "https://vert-x-ai-assignment-p94i-bq90mhebr.vercel.app",
+  origin: "https://vert-x-ai-assignment-frontend.vercel.app",
   credentials: true,
 }));
 app.use(express.json());
